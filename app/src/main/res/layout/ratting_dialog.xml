@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hãy chọn số sao và để lại feedback cho chúng tôi"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+    <RatingBar
+        android:id="@+id/dialogRattingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDescription"
+        android:layout_marginTop="10dp"
+        android:rating="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+    <ImageView
+        android:id="@+id/imgCamera"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_menu_camera"
+        android:layout_below="@id/dialogRattingBar"
+        android:layout_toStartOf="@id/imgPhoto"
+        android:layout_marginEnd="10dp"/>
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_insert_photo_24"
+        android:layout_below="@id/dialogRattingBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/imgCamera"
+        android:background="@drawable/edit_text_style_1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edtEvaluate"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:hint="để lại đánh giá của bạn tại đây"
+                android:inputType="textMultiLine"/>
+            <ImageView
+                android:id="@+id/imgPicture"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/edtEvaluate"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
